@@ -7,6 +7,7 @@ import AddTodo from "./components/AddTodo";
 import About from "./components/pages/About";
 //import uuid from "uuid";
 import Axios from "axios";
+import Contact from "./components/pages/Contact";
 
 class App extends React.Component {
 	state = {
@@ -59,8 +60,8 @@ class App extends React.Component {
 		return (
 			<Router>
 				<div className="App">
+					<Header />
 					<div className="container">
-						<Header />
 						<Route
 							exact
 							path="/"
@@ -76,6 +77,7 @@ class App extends React.Component {
 							)}
 						/>
 						<Route path="/about" component={About} />
+						<Route path="/contact" component={Contact} />
 					</div>
 				</div>
 			</Router>
